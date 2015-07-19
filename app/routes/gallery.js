@@ -1,11 +1,11 @@
 //create a module for gallery
 //  uses modules for logical groupings
-//  if there is only one path, don't use a module
+//  if there is only one path, don't use a modulei
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res) {
-  res.send('you created a new photo!');
+router.post('/', function(req, res) {
+  res.send('new picture posted!');
 });
 
 router.get('/:id', function(req, res) {

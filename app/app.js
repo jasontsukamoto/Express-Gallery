@@ -2,10 +2,30 @@ var express = require('express');
 var app = express();
 var db = require('../models');
 var gallery = require('./routes/gallery.js');
-// db.sequelize.sync();
+var bodyParser = require('body-parser');
+var User = db.User;
+db.sequelize.sync();
+// --- modules ^^^
+
+//tell express which template engine we using by npm module name
+app.set('view engine', 'jade');
+//tell express where our template file lives
+app.set('views', '../views');
+
+// --- app settings ^^^
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended : false }));
+
+// --- middleware ^^^
+
 
 app.get('/', function(req, res) {
-  res.send('herllo');
+  db.Picture.findAll().then(function(pictures) {
+    console.log(pictures);
+    res.render('contact.jade', { pictures : pictures });
+  });
+
 });
 
 
