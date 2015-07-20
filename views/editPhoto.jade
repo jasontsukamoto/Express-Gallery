@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Document
+body
+  div
+  form(action='/gallery/#{picture.id}',method='POST', enctype="application/x-www-form-urlencoded")
+    input(type='hidden', name='_method', value='PUT')
+    label(for='author') author
+    input(name='author')
+    br
+    label(for='link') link
+    input(name='link')
+    br
+    label(for='description') description
+    input(name='description')
+    br
+    button post
+
+

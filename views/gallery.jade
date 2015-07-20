@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Document
+body
+  h1 gallery
+  div #{picture.link}
+    form(action='/gallery/#{picture.id}', method='POST')
+      input(type='hidden', name='_method', value='DELETE')
+      input(type='submit' value='delete')
+    form(action="/gallery/#{picture.id}/edit", method='GET')
+      input(type='submit' value='edit')
+
+
+
