@@ -5,7 +5,14 @@ head
   title Document
 body
   h1 gallery
-  div #{picture.link}
+  div
+    ul
+      li #{picture.author}
+      br
+      li
+        img(src="#{picture.link}")
+      br
+      li #{picture.description}
     form(action='/gallery/#{picture.id}', method='POST')
       input(type='hidden', name='_method', value='DELETE')
       input(type='submit' value='delete')

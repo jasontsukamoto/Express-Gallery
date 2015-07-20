@@ -4,8 +4,15 @@ head
   meta(charset="UTF-8")
   title Document
 body
-  h1 hello
-  h2 world
+  h1 EXPRESS GALLERY
   ul
-    each val in pictures
-      img(src="val.dataValues.link")
+    each picture in pictures
+      li #{picture.author}
+      br
+      li
+        img(src=picture.link)
+      br
+      li= picture.description
+      br
+      li
+        a(href="/gallery/#{picture.id}") link to image

@@ -46,9 +46,8 @@ router.put('/:id', function(req, res) {
           id : id
         }
   }).then(function(image) {
-    console.log(image);
-    res.send('put complete');
-    // res.end();
+    res.redirect('/gallery/' + id);
+    res.end();
   });
 });
 
@@ -59,7 +58,7 @@ router.delete('/:id', function(req, res) {
       id : id
     }
   }).then(function() {
-    res.send('will delete that photo');
+    res.redirect('/');
     res.end();
   });
 });

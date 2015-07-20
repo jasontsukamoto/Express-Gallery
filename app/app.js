@@ -36,8 +36,10 @@ app.use(methodOverride(function(req, res) {
 //mounts the middleware function(s) at the path
 //  defer all routes matching http://localhost:3000/gallery to module
 app.use('/gallery', gallery);
+
 app.get('/', function(req, res) {
   db.Picture.findAll().then(function(pictures) {
+    console.log(pictures)
     res.render('contact', { pictures : pictures });
   });
 });
