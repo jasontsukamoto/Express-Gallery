@@ -1,5 +1,67 @@
-$dark-color : #333333;
+@import "partials/settings";
+@import "partials/foundation";
 
 body {
-  background: $dark-color;
+  background-image: url('../../assets/background-image.png');
+  @media #{$large-up} {
+    background-color: blue;
+  }
 }
+
+#container {
+  padding: 30px;
+
+  #header {
+    height: 100%;
+    width: 100%;
+
+    h1 {
+      font-size: 4em;
+      text-align: center;
+    }
+    #imageHolder {
+      background-image: url('../../assets/mainphoto.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 310px;
+      width: 100%;
+    }
+  }
+
+  #pictures {
+    .author {
+
+    }
+    .description {
+      display: none;
+    }
+
+  }
+}
+
+// #header {
+//   text-align: center;
+//   h1 {
+//     font-weight: bolder;
+//     font-size: 4em;
+//   }
+
+//   #imageHolder {
+    // background-image: url('../../assets/mainphoto.jpg');
+//     background-repeat: no-repeat;
+//     // background-size: 600px 300px;
+//     margin: auto;
+//     width: 90%;
+//     height: 310px;
+//   }
+// }
+
+// #pictures {
+//   text-decoration: none;
+//   .author {
+//     display : none;
+//   }
+//   li {
+//     text-decoration: none;
+//   }
+// }

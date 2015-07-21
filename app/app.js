@@ -5,7 +5,7 @@ var gallery = require('./routes/gallery.js');
 var bodyParser = require('body-parser');
 var User = db.User;
 var methodOverride = require('method-override');
-var morgan = require('morgan');
+var log = require('morgan');
 var path = require('path');
 db.sequelize.sync();
 
@@ -18,8 +18,8 @@ app.set('view engine', 'jade');
 app.set('views', path.resolve('views'));
 
 // --- app settings ^^^
-
-app.use(morgan('dev'));
+app.use(log('dev'));
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : false }));
 app.use(methodOverride(function(req, res) {
@@ -39,7 +39,6 @@ app.use('/gallery', gallery);
 
 app.get('/', function(req, res) {
   db.Picture.findAll().then(function(pictures) {
-    console.log(pictures)
     res.render('contact', { pictures : pictures });
   });
 });

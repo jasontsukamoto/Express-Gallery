@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 html(lang="en")
-head
-  meta(charset="UTF-8")
-  title Document
-body
-  h1 EXPRESS GALLERY
-  ul
-    each picture in pictures
-      li #{picture.author}
-      br
-      li
-        img(src=picture.link)
-      br
-      li= picture.description
-      br
-      li
-        a(href="/gallery/#{picture.id}") link to image
+  head
+    meta(charset="UTF-8")
+    title Document
+    link(href="/css/styles.css" rel="stylesheet")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    script(src='/bower_components/foundation/js/foundation.min.js')
+    script.
+      $(document).foundation();
+
+  body
+    div#container
+      div#header
+        h1 _ARCHITEKT
+        div#imageHolder
+      hr
+      div#pictures.row
+        each picture in pictures
+          div.columns.small-12.large-4
+            div.images
+              img(src=picture.link)
+            br
+            div.author #{picture.author}
+            br
+            div.description #{picture.description}
+            br
+            div
+              a(href="/gallery/#{picture.id}") link to image

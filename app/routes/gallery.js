@@ -12,8 +12,8 @@ router.post('/', function(req, res) {
     link : req.body.link,
     description : req.body.description
   }).then(function(image) {
-    // console.log(image);
   });
+  res.redirect('/');
   res.end();
 });
 
@@ -26,7 +26,6 @@ router.get('/:id', function(req, res) {
     res.render('gallery', { picture : picture });
   });
 
-  // res.send('gallery photo');
 });
 
 router.get('/:id/edit', function(req, res) {
