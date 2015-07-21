@@ -3,9 +3,6 @@
 
 body {
   background-image: url('../../assets/background-image.png');
-  @media #{$large-up} {
-    background-color: blue;
-  }
 }
 
 #container {
@@ -28,14 +25,36 @@ body {
       background-position: center;
       height: 150px;
       width: 100%;
+      @media #{$large-up} {
+        background-size: 720px 300px;
+        height: 300px;
+        min-width: 720px;
+      }
     }
   }
 
   #pictures {
-    width: 100%;
+    // width: 100%;
     margin: 0 auto;
     color: #9A9A9B;
     font-size: .9em;
+    .images {
+      width: 300px;
+      margin: 0 auto;
+
+      img {
+        display: inline-block;
+        // margin: 0 auto;
+        width: 300px;
+        text-align: center;
+      }
+
+      .author,
+      .link {
+        display: block;
+      }
+    }
+
     #innerPicture {
       margin: auto;
       width: 300px;
@@ -66,15 +85,12 @@ body {
         }
       }
     }
-    .images {
-      height: 180px;
-      width: 300px;
-    }
+
     .description {
       display: none;
     }
     .link {
-      margin-top:-45px;
+      // margin-top:-45px;
       margin-bottom: 30px;
     }
 

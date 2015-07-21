@@ -18,14 +18,11 @@ html(lang="en")
       hr
       div#pictures.row
         each picture in pictures
-          div.columns.small-12.large-4
+          div.columns.small-12.medium-4
             div.images
               img(src=picture.link)
-            br
-            div.author #{picture.author}
-            br
-            div.description #{picture.description}
-            br
-            div.link
-              a(href="/gallery/#{picture.id}") link to image
+              div.author #{picture.author}
+              div.description #{picture.description}
+              div.link
+                a(href="/gallery/#{picture.id}") link to image
       hr
