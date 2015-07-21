@@ -9,31 +9,44 @@ body {
 }
 
 #container {
-  padding: 30px;
+  padding: 40px;
 
   #header {
     height: 100%;
     width: 100%;
 
     h1 {
-      font-size: 4em;
+      font-size: 3em;
       text-align: center;
+      color: #7A757B;
     }
     #imageHolder {
       background-image: url('../../assets/mainphoto.jpg');
       background-repeat: no-repeat;
+      background-size: 320px 150px;
       background-position: center;
-      height: 310px;
+      height: 150px;
       width: 100%;
     }
   }
 
   #pictures {
+    margin: auto;
+    color: #9A9A9B;
+    font-size: .9em;
+    .images {
+      height: 180px;
+      width: 300px;
+    }
     .author {
 
     }
     .description {
       display: none;
+    }
+    .link {
+      margin-top:-45px;
+      margin-bottom: 30px;
     }
 
   }
