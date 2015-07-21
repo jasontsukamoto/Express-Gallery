@@ -17,6 +17,7 @@ body {
 
     h1 {
       font-size: 3em;
+      font-weight: bolder;
       text-align: center;
       color: #7A757B;
     }
@@ -31,15 +32,43 @@ body {
   }
 
   #pictures {
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     color: #9A9A9B;
     font-size: .9em;
+    #innerPicture {
+      margin: auto;
+      width: 300px;
+      .detailImage {
+        margin: auto;
+        height: 190px;
+        width: 300px;
+        margin-bottom: 10px;
+      }
+      .detailAuthor {
+        font-size: 1.2em;
+        font-weight: bolder;
+        margin-bottom: -5px;
+      }
+      .detailDescription {
+        margin-bottom: 20px;
+      }
+      .form {
+        text-align: center;
+        form {
+          display: inline-block;
+          padding-right: 15px;
+          input {
+            height: 30px;
+            width: 50px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
     .images {
       height: 180px;
       width: 300px;
-    }
-    .author {
-
     }
     .description {
       display: none;

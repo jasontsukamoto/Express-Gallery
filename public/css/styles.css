@@ -3391,6 +3391,7 @@ body {
     width: 100%; }
     #container #header h1 {
       font-size: 3em;
+      font-weight: bolder;
       text-align: center;
       color: #7A757B; }
     #container #header #imageHolder {
@@ -3401,9 +3402,33 @@ body {
       height: 150px;
       width: 100%; }
   #container #pictures {
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     color: #9A9A9B;
     font-size: .9em; }
+    #container #pictures #innerPicture {
+      margin: auto;
+      width: 300px; }
+      #container #pictures #innerPicture .detailImage {
+        margin: auto;
+        height: 190px;
+        width: 300px;
+        margin-bottom: 10px; }
+      #container #pictures #innerPicture .detailAuthor {
+        font-size: 1.2em;
+        font-weight: bolder;
+        margin-bottom: -5px; }
+      #container #pictures #innerPicture .detailDescription {
+        margin-bottom: 20px; }
+      #container #pictures #innerPicture .form {
+        text-align: center; }
+        #container #pictures #innerPicture .form form {
+          display: inline-block;
+          padding-right: 15px; }
+          #container #pictures #innerPicture .form form input {
+            height: 30px;
+            width: 50px;
+            border-radius: 5px; }
     #container #pictures .images {
       height: 180px;
       width: 300px; }
