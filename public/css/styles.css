@@ -3382,15 +3382,46 @@ body {
   background-image: url("../../assets/background-image.png"); }
 
 #container {
-  padding: 40px; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
   #container #header {
     height: 100%;
-    width: 100%; }
-    #container #header h1 {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #7A757B; }
+    @media only screen and (min-width: 40.0625em) {
+      #container #header {
+        max-width: 750px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #7A757B; } }
+    @media only screen and (min-width: 40.0625em) {
+      #container #header .titlebar {
+        margin-bottom: 30px;
+        width: 730px;
+        border-top: 1px dotted #7A757B; } }
+    #container #header .titlebar .architect {
       font-size: 3em;
       font-weight: bolder;
-      text-align: center;
       color: #7A757B; }
+      @media only screen and (min-width: 40.0625em) {
+        #container #header .titlebar .architect {
+          display: inline;
+          padding-bottom: 50px;
+          font-size: 4em; } }
+    @media only screen and (min-width: 40.0625em) {
+      #container #header .titlebar #company_motto {
+        display: inline;
+        font-size: .7em;
+        padding-top: 5px;
+        color: #7A757B;
+        float: right;
+        width: 277px;
+        padding-left: 20px;
+        border-left: 1px dotted #7A757B;
+        text-align: left; } }
     #container #header #imageHolder {
       background-image: url("../../assets/mainphoto.jpg");
       background-repeat: no-repeat;
@@ -3398,25 +3429,45 @@ body {
       background-position: center;
       height: 150px;
       width: 100%; }
-      @media only screen and (min-width: 64.0625em) {
+      @media only screen and (min-width: 40.0625em) {
         #container #header #imageHolder {
-          background-size: 720px 300px;
+          background-size: 730px 300px;
           height: 300px;
-          min-width: 720px; } }
+          min-width: 730px;
+          margin-bottom: 20px; } }
   #container #pictures {
     margin: 0 auto;
     color: #9A9A9B;
     font-size: .9em; }
+    @media only screen and (min-width: 40.0625em) {
+      #container #pictures {
+        width: 750px; } }
+    @media only screen and (min-width: 40.0625em) {
+      #container #pictures .footer-line {
+        border-bottom: 1px solid #7A757B; } }
     #container #pictures .images {
       width: 300px;
       margin: 0 auto; }
+      @media only screen and (min-width: 40.0625em) {
+        #container #pictures .images {
+          width: 250px;
+          margin: auto; } }
       #container #pictures .images img {
+        padding-top: 20px;
         display: inline-block;
-        width: 300px;
-        text-align: center; }
-      #container #pictures .images .author,
-      #container #pictures .images .link {
+        height: 150px;
+        width: 300px; }
+        @media only screen and (min-width: 40.0625em) {
+          #container #pictures .images img {
+            height: 160px;
+            width: 230px; } }
+      #container #pictures .images .author {
+        display: inline-block;
         display: block; }
+      #container #pictures .images .link {
+        display: inline-block;
+        display: block;
+        margin-bottom: 30px; }
     #container #pictures #innerPicture {
       margin: auto;
       width: 300px; }
@@ -3440,7 +3491,6 @@ body {
             height: 30px;
             width: 50px;
             border-radius: 5px; }
-    #container #pictures .description {
-      display: none; }
-    #container #pictures .link {
-      margin-bottom: 30px; }
+    @media only screen and (min-width: 64.0625em) {
+      #container #pictures h1 {
+        font-size: 30em; } }

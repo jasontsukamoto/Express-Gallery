@@ -2,7 +2,7 @@
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Document
+    title Express-Gallery
     link(href="/css/styles.css" rel="stylesheet")
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     script(src='/bower_components/jquery/dist/jquery.min.js')
@@ -13,16 +13,15 @@ html(lang="en")
   body
     div#container
       div#header
-        h1 _ARCHITEKT
+        div.titlebar
+          div.architect _ARCHITEKT
+          div.hide-for-small-only#company_motto Welcome to our online portfolio, we are a small group of passionate designers and architects, looking to change and create amazing digital images to inspire others to follow in our innovative steps.  Free Architect WordPress Theme
         div#imageHolder
-      hr
       div#pictures.row
         each picture in pictures
-          div.columns.small-12.medium-4
+          div.columns.small-12.medium-6.large-4.footer-line
             div.images
               img(src=picture.link)
               div.author #{picture.author}
-              div.description #{picture.description}
               div.link
                 a(href="/gallery/#{picture.id}") link to image
-      hr
