@@ -10,7 +10,8 @@ router.post('/', function(req, res) {
   db.Picture.create({
     author : req.body.author,
     link : req.body.link,
-    description : req.body.description
+    description : req.body.description,
+    user_id : req.user.id
   }).then(function(image) {
   });
   res.redirect('/');
@@ -19,13 +20,17 @@ router.post('/', function(req, res) {
 
 router.get('/:id', function(req, res) {
   var id = req.params.id;
-  db.Picture.find({ where : {
-                        id : id
-                      }
-  }).then(function(picture) {
-    res.render('gallery', { picture : picture });
-  });
+  db.Picture.findById(id)
+  .then(function(picture) {
 
+    db.Picture.findAll()
+    .then(function(pictures) {
+      res.render('gallery', {
+        allPictures : pictures,
+        picture : picture
+      });
+    });
+  });
 });
 
 router.get('/:id/edit', function(req, res) {

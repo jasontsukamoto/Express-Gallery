@@ -1,20 +1,18 @@
+'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Picture = sequelize.define('Picture', {
-    id : {
-      type : DataTypes.INTEGER,
-      primaryKey : true,
-      autoIncrement : true
+    author: DataTypes.STRING,
+    link: DataTypes.STRING,
+    description: DataTypes.STRING
+  }, {
+    classMethods: {
+      associate: function(models) {
+        // associations can be defined here
+        Picture.belongsTo(models.User, { foreignKey : 'user_id', targetKey : 'id'});
+      }
     },
-    author : DataTypes.STRING,
-    link : DataTypes.STRING,
-    description : DataTypes.STRING,
-    created_at : DataTypes.DATE,
-    updated_at : DataTypes.DATE
-  },{
-    underscored: true,
-    tableName: 'pictures'
+    tableName : 'pictures',
+    underscored : true
   });
-
   return Picture;
-}
-
+};

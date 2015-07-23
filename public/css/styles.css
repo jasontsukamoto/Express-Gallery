@@ -3385,8 +3385,6 @@ body {
   padding-top: 40px;
   padding-bottom: 40px; }
   #container #header {
-    height: 100%;
-    width: 100%;
     text-align: center;
     margin: auto;
     padding-bottom: 20px;
@@ -3395,8 +3393,7 @@ body {
     @media only screen and (min-width: 40.0625em) {
       #container #header {
         max-width: 750px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #7A757B; } }
+        margin-bottom: 20px; } }
     @media only screen and (min-width: 40.0625em) {
       #container #header .titlebar {
         margin-bottom: 30px;
@@ -3422,15 +3419,16 @@ body {
         padding-left: 20px;
         border-left: 1px dotted #7A757B;
         text-align: left; } }
-    #container #header #imageHolder {
-      background-image: url("../../assets/mainphoto.jpg");
+    #container #header .mainPicture {
+      margin: 0 auto;
       background-repeat: no-repeat;
+      max-width: 320px;
       background-size: 320px 150px;
       background-position: center;
       height: 150px;
       width: 100%; }
       @media only screen and (min-width: 40.0625em) {
-        #container #header #imageHolder {
+        #container #header .mainPicture {
           background-size: 730px 300px;
           height: 300px;
           min-width: 730px;
@@ -3442,16 +3440,14 @@ body {
     @media only screen and (min-width: 40.0625em) {
       #container #pictures {
         width: 750px; } }
-    @media only screen and (min-width: 40.0625em) {
-      #container #pictures .footer-line {
-        border-bottom: 1px solid #7A757B; } }
     #container #pictures .images {
       width: 300px;
       margin: 0 auto; }
       @media only screen and (min-width: 40.0625em) {
         #container #pictures .images {
           width: 250px;
-          margin: auto; } }
+          margin: auto;
+          border-bottom: 1px solid #7A757B; } }
       #container #pictures .images img {
         padding-top: 20px;
         display: inline-block;
@@ -3468,29 +3464,75 @@ body {
         display: inline-block;
         display: block;
         margin-bottom: 30px; }
-    #container #pictures #innerPicture {
-      margin: auto;
-      width: 300px; }
-      #container #pictures #innerPicture .detailImage {
-        margin: auto;
-        height: 190px;
-        width: 300px;
-        margin-bottom: 10px; }
-      #container #pictures #innerPicture .detailAuthor {
-        font-size: 1.2em;
-        font-weight: bolder;
-        margin-bottom: -5px; }
-      #container #pictures #innerPicture .detailDescription {
-        margin-bottom: 20px; }
-      #container #pictures #innerPicture .form {
-        text-align: center; }
-        #container #pictures #innerPicture .form form {
-          display: inline-block;
-          padding-right: 15px; }
-          #container #pictures #innerPicture .form form input {
-            height: 30px;
-            width: 50px;
-            border-radius: 5px; }
-    @media only screen and (min-width: 64.0625em) {
-      #container #pictures h1 {
-        font-size: 30em; } }
+  #container #detail_header {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px; }
+    @media only screen and (min-width: 40.0625em) {
+      #container #detail_header {
+        width: 900px;
+        margin-bottom: 20px; } }
+    @media only screen and (min-width: 40.0625em) {
+      #container #detail_header .titlebar {
+        margin-bottom: 30px;
+        border-top: 1px dotted #7A757B; } }
+    #container #detail_header .titlebar .architect {
+      font-size: 3em;
+      font-weight: bolder;
+      color: #7A757B; }
+      @media only screen and (min-width: 40.0625em) {
+        #container #detail_header .titlebar .architect {
+          display: inline;
+          padding-bottom: 50px;
+          padding-right: 200px;
+          font-size: 4em; } }
+    @media only screen and (min-width: 40.0625em) {
+      #container #detail_header .titlebar #company_motto {
+        display: inline;
+        font-size: .7em;
+        padding-top: 5px;
+        color: #7A757B;
+        float: right;
+        width: 277px;
+        padding-left: 20px;
+        border-left: 1px dotted #7A757B;
+        text-align: left; } }
+  #container #innerPicture {
+    margin: 0 auto;
+    width: 300px; }
+    #container #innerPicture .innerPictures {
+      margin: 0 auto;
+      height: 190px;
+      width: 300px;
+      background-size: cover;
+      margin-bottom: 10px; }
+      @media only screen and (min-width: 40.0625em) {
+        #container #innerPicture .innerPictures {
+          width: 626px;
+          height: 392px;
+          background-repeat: no-repeat;
+          background-size: cover; } }
+    @media only screen and (min-width: 40.0625em) {
+      #container #innerPicture {
+        height: 391px;
+        width: 626px; } }
+    #container #innerPicture .detailAuthor {
+      font-size: 1.2em;
+      font-weight: bolder;
+      margin-bottom: -5px; }
+    #container #innerPicture .detailDescription {
+      margin-bottom: 20px; }
+    #container #innerPicture .form {
+      text-align: center; }
+      #container #innerPicture .form form {
+        display: inline-block;
+        padding-right: 15px; }
+        #container #innerPicture .form form input {
+          height: 30px;
+          width: 50px;
+          border-radius: 5px; }
+  #container .columnLayout .images {
+    height: 217px;
+    width: 306px;
+    margin-bottom: 30px; }

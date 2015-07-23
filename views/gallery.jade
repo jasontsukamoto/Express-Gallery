@@ -1,33 +1,25 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    title Express-Gallery
-    link(href="/css/styles.css" rel="stylesheet")
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    script(src='/bower_components/jquery/dist/jquery.min.js')
-    script(src='/bower_components/foundation/js/foundation.min.js')
-    script.
-      $(document).foundation();
-
-  body
-    div#container
-      div#header
-        h1 _ARCHITEKT
-      div#pictures
-        div#innerPicture
-          div.detailAuthor #{picture.author}
-          br
-          div.detailImage
-            img(src="#{picture.link}")
-          br
-          div.detailDescription #{picture.description}
-          div.form
-            form(action='/gallery/#{picture.id}', method='POST')
-              input(type='hidden', name='_method', value='DELETE')
-              input(type='submit' value='delete')
-            form(action="/gallery/#{picture.id}/edit", method='GET')
-              input(type='submit' value='edit')
-
-
+extends _layout
+block content
+  div#detail_header
+    div.titlebar
+      div.architect _ARCHITEKT
+      div.show-for-large-up#company_motto Welcome to our online portfolio, we are a small group of passionate designers and architects, looking to change and create amazing digital images to inspire others to follow in our innovative steps.  Free Architect WordPress Theme
+  div.row
+    div#innerPicture.large-8.columns
+      div.detailAuthor #{picture.author}
+      div.detailImage
+        div.innerPictures(style="background-image: url(#{picture.link})")
+      div.detailDescription #{picture.description}
+      div.form
+        form(action='/gallery/#{picture.id}', method='POST')
+          input(type='hidden', name='_method', value='DELETE')
+          input(type='submit' value='delete')
+        form(action="/gallery/#{picture.id}/edit", method='GET')
+          input(type='submit' value='edit')
+    div.columnLayout.show-for-large-up.large-4.columns
+      each singlePicture in allPictures
+        div.images
+          a(href="/gallery/#{singlePicture.id}")
+            img(src=singlePicture.link)
+          div #{singlePicture.author}
 
