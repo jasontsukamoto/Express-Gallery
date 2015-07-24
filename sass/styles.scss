@@ -223,5 +223,19 @@ body {
       margin-bottom: 30px;
     }
   }
+
+  #loginForm {
+    height: 300px;
+    width: 600px;
+    border: 1px dashed black;
+    margin: auto;
+
+    form {
+      width: 300px;
+      margin: auto;
+      margin-top: 30px;
+    }
+  }
+
 }
 

@@ -16,7 +16,7 @@ var ensureAuthenticated = require('./lib/auth.js');
 var cookieParser = require('cookie-parser');
 db.sequelize.sync();
 // User.findOrCreate({ where : { id : 1}, defaults : {username: 'admin', password : createHash('nibblers')}});
-// Picture.findOrCreate({ where : { id : 1 }, defaults : { author : 'admin', link : 'google.com', description : 'http://wallpapersweb.com/data/media/90/Sunrise%20Scenic.jpg', user_id : 1 }});
+Picture.findOrCreate({ where : { id : 1 }, defaults : { author : 'admin', link : 'google.com', description : 'http://wallpapersweb.com/data/media/90/Sunrise%20Scenic.jpg', user_id : 1 }});
 // --- modules ^^^
 
 //tell express which template engine we using by npm module name
@@ -75,12 +75,13 @@ passport.use(new LocalStrategy(
     // })
 
     User.findOne( { username : username }).then(function(user) {
+      console.log(user);
       if (!user) {
         console.log('incorrect user');
         return done(null, false, { message: 'Incorrect username'} );
       }
-      // console.log(createHash(password));
-      // console.log(user.password);
+      console.log(createHash(password));
+      console.log(user.password);
       // console.log(user);
       if (user.password !== createHash(password)) {
         console.log('incorrect password');
@@ -103,7 +104,7 @@ app.use('/gallery', gallery);
 //   res.send('ok');
 // });
 app.post('/login',
-  passport.authenticate('local', { succcessRedirect : '/',
+  passport.authenticate('local', { successRedirect : '/',
                                   failureRedirect : '/login'
                                 })
 );

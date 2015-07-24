@@ -3394,31 +3394,32 @@ body {
       #container #header {
         max-width: 750px;
         margin-bottom: 20px; } }
-    @media only screen and (min-width: 40.0625em) {
-      #container #header .titlebar {
-        margin-bottom: 30px;
-        width: 730px;
-        border-top: 1px dotted #7A757B; } }
-    #container #header .titlebar .architect {
-      font-size: 3em;
-      font-weight: bolder;
-      color: #7A757B; }
+    #container #header .titlebar {
+      margin-bottom: 30px;
+      width: 730px; }
       @media only screen and (min-width: 40.0625em) {
-        #container #header .titlebar .architect {
+        #container #header .titlebar {
+          border-top: 1px dotted #7A757B; } }
+      #container #header .titlebar .architect {
+        font-size: 3em;
+        font-weight: bolder;
+        color: #7A757B; }
+        @media only screen and (min-width: 40.0625em) {
+          #container #header .titlebar .architect {
+            display: inline;
+            padding-bottom: 50px;
+            font-size: 4em; } }
+      @media only screen and (min-width: 40.0625em) {
+        #container #header .titlebar #company_motto {
           display: inline;
-          padding-bottom: 50px;
-          font-size: 4em; } }
-    @media only screen and (min-width: 40.0625em) {
-      #container #header .titlebar #company_motto {
-        display: inline;
-        font-size: .7em;
-        padding-top: 5px;
-        color: #7A757B;
-        float: right;
-        width: 277px;
-        padding-left: 20px;
-        border-left: 1px dotted #7A757B;
-        text-align: left; } }
+          font-size: .7em;
+          padding-top: 5px;
+          color: #7A757B;
+          float: right;
+          width: 277px;
+          padding-left: 20px;
+          border-left: 1px dotted #7A757B;
+          text-align: left; } }
     #container #header .mainPicture {
       margin: 0 auto;
       background-repeat: no-repeat;
@@ -3536,3 +3537,12 @@ body {
     height: 217px;
     width: 306px;
     margin-bottom: 30px; }
+  #container #loginForm {
+    height: 300px;
+    width: 600px;
+    border: 1px dashed black;
+    margin: auto; }
+    #container #loginForm form {
+      width: 300px;
+      margin: auto;
+      margin-top: 30px; }
